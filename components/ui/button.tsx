@@ -7,7 +7,7 @@ export const Button = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttrib
   ({ className, variant = 'primary', ...props }, ref) => {
     const variants = {
       primary: 'btn btn-primary',
-      outline: 'btn border border-black/20',
+      outline: 'btn btn-outline',
       ghost: 'btn btn-ghost',
     }
     return <button ref={ref} className={cn(variants[variant], className)} {...props} />

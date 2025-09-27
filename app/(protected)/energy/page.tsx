@@ -17,7 +17,9 @@ export default function Page() {
   const save = useCheckinStore(s => s.saveCheckin)
   return (
     <Guard>
-      <QuestionScreen title="How energetic are you today?" options={options} onSelect={(v) => { save({ energy: v }); router.push('/dashboard') }} />
+      <div className="flex flex-1 items-center justify-center py-10">
+        <QuestionScreen title="How energetic are you today?" options={options} onSelect={(v) => { save({ energy: v }); router.push('/dashboard') }} />
+      </div>
     </Guard>
   )
 }

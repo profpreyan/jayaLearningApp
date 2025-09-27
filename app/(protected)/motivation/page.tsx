@@ -17,7 +17,9 @@ export default function Page() {
   const save = useCheckinStore(s => s.saveCheckin)
   return (
     <Guard>
-      <QuestionScreen title="How motivated do you feel today to learn?" options={options} onSelect={(v) => { save({ motivation: v }); router.push('/energy') }} />
+      <div className="flex flex-1 items-center justify-center py-10">
+        <QuestionScreen title="How motivated do you feel today to learn?" options={options} onSelect={(v) => { save({ motivation: v }); router.push('/energy') }} />
+      </div>
     </Guard>
   )
 }
