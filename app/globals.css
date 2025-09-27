@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --brand: #E10600; }
+html, body { height: 100%; }
+body { @apply bg-white text-black; }
+
+/* shadcn-like primitives */
+.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium transition; }
+.btn-primary { @apply bg-black text-white; }
+.btn-primary:disabled { @apply opacity-50; }
+.btn-ghost { @apply bg-transparent text-black; }
+.card { @apply rounded-xl border border-black/10 bg-white; }
+.card-body { @apply p-4; }
+.badge { @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium; }
+.badge-gray { @apply bg-gray-200 text-gray-700; }
+.badge-blue { @apply bg-blue-200 text-blue-700; }
+.badge-green { @apply bg-green-200 text-green-700; }
+.progress { @apply h-2 w-full overflow-hidden rounded-full bg-gray-200; }
+.progress > div { @apply h-full bg-[color:var(--brand)]; }
+.locked { @apply opacity-60; }
