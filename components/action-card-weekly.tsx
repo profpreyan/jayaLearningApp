@@ -17,7 +17,7 @@ export default function ActionCardWeekly() {
           <h3 className="font-semibold">Week {w.weekNo} • {w.startISO} → {w.endISO}</h3>
           <span className={cn('badge', statusColor)}>{w.status[0].toUpperCase()+w.status.slice(1)}</span>
         </div>
-        <p className="text-sm">{w.title}</p>
+        <p className="text-sm text-neutral-300">{w.title}</p>
         <div className="flex items-center justify-between">
           <div />
           <LockBadge locked={locked} />

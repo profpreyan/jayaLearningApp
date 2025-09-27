@@ -2,22 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { --brand: #E10600; }
+:root {
+  --brand: #E10600;
+  color-scheme: dark;
+}
 html, body { height: 100%; }
-body { @apply bg-white text-black; }
+body { @apply bg-neutral-950 text-neutral-100 antialiased; }
 
 /* shadcn-like primitives */
-.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium transform transition duration-200 ease-out hover:-translate-y-0.5 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand)] focus-visible:ring-opacity-40 focus-visible:ring-offset-2 focus-visible:ring-offset-white; }
-.btn-primary { @apply bg-[color:var(--brand)] text-white shadow-sm hover:bg-[#c10000]; }
+.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium transform transition duration-200 ease-out hover:-translate-y-0.5 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand)] focus-visible:ring-opacity-50 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950; }
+.btn-primary { @apply bg-[color:var(--brand)] text-white shadow-lg shadow-red-500/40 hover:bg-[#c10000]; }
 .btn-primary:disabled { @apply cursor-not-allowed opacity-60; }
-.btn-outline { @apply border border-black/10 bg-white text-black shadow-sm hover:border-[color:var(--brand)] hover:text-[color:var(--brand)] hover:shadow-md; }
-.btn-ghost { @apply bg-transparent text-black hover:bg-[#ffe5e5] hover:text-[color:var(--brand)]; }
-.card { @apply rounded-xl border border-black/10 bg-white; }
+.btn-outline { @apply border border-white/20 bg-white/5 text-neutral-100 shadow-none hover:border-white/40 hover:bg-white/10 hover:text-white; }
+.btn-ghost { @apply bg-transparent text-neutral-200 hover:bg-white/10 hover:text-white; }
+.card { @apply rounded-xl border border-white/10 bg-neutral-900/80 backdrop-blur; }
 .card-body { @apply p-4; }
 .badge { @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium; }
-.badge-gray { @apply bg-gray-200 text-gray-700; }
-.badge-blue { @apply bg-blue-200 text-blue-700; }
-.badge-green { @apply bg-green-200 text-green-700; }
-.progress { @apply h-2 w-full overflow-hidden rounded-full bg-gray-200; }
+.badge-gray { @apply bg-neutral-800 text-neutral-300; }
+.badge-blue { @apply bg-blue-500/20 text-blue-200; }
+.badge-green { @apply bg-emerald-500/20 text-emerald-200; }
+.progress { @apply h-2 w-full overflow-hidden rounded-full bg-white/10; }
 .progress > div { @apply h-full bg-[color:var(--brand)]; }
 .locked { @apply opacity-60; }

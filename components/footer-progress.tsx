@@ -10,7 +10,7 @@ export default function FooterProgress() {
   return (
     <footer className="mt-6">
       <div className="progress"><div style={{ width: `${pct}%` }} /></div>
-      <div className="mt-2 text-sm">Progress: {pct}% • Coins {data.coins} • Badges {data.badges}</div>
+      <div className="mt-2 text-sm text-neutral-400">Progress: {pct}% • Coins {data.coins} • Badges {data.badges}</div>
     </footer>
   )
 }

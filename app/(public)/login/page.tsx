@@ -29,11 +29,11 @@ export default function LoginPage() {
             onChange={e => setCode(e.target.value)}
             placeholder="e.g., AB12C"
             aria-label="Access code"
-            className="w-full rounded-xl border border-black/10 p-3 text-center text-lg tracking-[0.4em] uppercase transition focus:border-[color:var(--brand)] focus:ring-2 focus:ring-[color:var(--brand)] focus:ring-opacity-40 focus:outline-none"
+            className="w-full rounded-xl border border-white/20 bg-neutral-900/80 p-3 text-center text-lg tracking-[0.4em] uppercase text-white placeholder:text-neutral-500 transition focus:border-[color:var(--brand)] focus:outline-none focus:ring-2 focus:ring-[color:var(--brand)] focus:ring-opacity-50 focus:ring-offset-2 focus:ring-offset-neutral-950"
           />
           <button className="btn btn-primary w-full" disabled={!valid}>Login</button>
           {!valid && code.length > 0 && (
-            <p className="text-center text-sm text-red-600">Code must be 5 letters or numbers.</p>
+            <p className="text-center text-sm text-red-400">Code must be 5 letters or numbers.</p>
           )}
         </form>
       </div>

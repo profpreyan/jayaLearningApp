@@ -18,9 +18,9 @@ export default function ActionCardDaily({ dayNo }: { dayNo: 1|2|3|4|5 }) {
           <h3 className="font-semibold">Day {d.dayNo} • {d.dayName} • {d.dateISO}</h3>
           <span className={cn('badge', statusColor)}>{d.status[0].toUpperCase()+d.status.slice(1)}</span>
         </div>
-        <p className="text-sm">{d.title}</p>
+        <p className="text-sm text-neutral-300">{d.title}</p>
         <div className="flex items-center justify-between">
-          <div className="space-x-2">
+          <div className="space-x-2 text-sm text-neutral-300">
             <a className="underline" href={d.links.customGptUrl} target="_blank" rel="noreferrer">Custom GPT</a>
             <a className="underline" href={d.links.notebookLmUrl} target="_blank" rel="noreferrer">NotebookLM</a>
           </div>
